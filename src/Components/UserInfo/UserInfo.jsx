@@ -4,7 +4,7 @@ import Repos from "./Repos"
 
 const UserInfo = () => {
   return (
-    <div>
+    <div className="flex  mt-[140px]">
         <Profile/>
         <Repos/>
     </div>

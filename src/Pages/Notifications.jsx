@@ -2,9 +2,10 @@ import Navbar from '../Components/Navbar/Navbar'
 
 const Notifications = () => {
   return (
-    <div className='flex'>
+    <div className='flex relative h-[100vh] w-[100%]'>
       <Navbar/>
-      Notifications</div>
+      <div className='ml-[60px]'>Notifications</div>
+      </div>
   )
 }
 
