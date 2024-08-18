@@ -1,8 +1,10 @@
-import React from 'react'
+import Navbar from '../Components/Navbar/Navbar'
 
 const Notifications = () => {
   return (
-    <div>Notifications</div>
+    <div className='flex'>
+      <Navbar/>
+      Notifications</div>
   )
 }
 

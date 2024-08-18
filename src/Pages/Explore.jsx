@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../Components/Navbar/Navbar'
 
 const Explore = () => {
   return (
-    <div>Explore</div>
+    <div className='flex'>
+      <Navbar/>
+      Explore
+      </div>
   )
 }
 

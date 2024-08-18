@@ -5,10 +5,11 @@ import Explore from "./Pages/Explore"
 import Notifications from "./Pages/Notifications"
 
 
+
 function App() {
   
   return (
-  <div className="">
+  <div className="relative h-full">
    
   <BrowserRouter>
     <Routes>
