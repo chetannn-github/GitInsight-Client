@@ -5,6 +5,7 @@ import Repos from '../Components/UserInfo/Repos'
 import useExplore from '../hooks/useExplore';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import Spinner from '../Components/Spinner';
 
 
 const Explore = () => {
@@ -24,7 +25,7 @@ const Explore = () => {
       <Navbar/>
       <div className='ml-[60px] w-[calc(100%-60px)]  flex flex-col items-center '>
         <ExploreHeader/>
-        {!exploreRepos && (<div className='w-1/2 mt-[160px]'>Loaddinggggggg......</div>)}
+        {!exploreRepos && (<div className='w-1/2 mt-[160px] relative flex justify-center'><Spinner/></div>)}
         {exploreRepos &&(<div className='w-1/2 mt-[140px]' ><Repos repos={exploreRepos.repos}/></div>)}
        
       </div>

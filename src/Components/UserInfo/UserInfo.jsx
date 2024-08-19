@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
 import Profile from "./Profile"
 import Repos from "./Repos"
+import Spinner from "../Spinner";
 
 
 const UserInfo = () => {
-  let userInfo= useSelector((store)=>(store.user));
+  let userInfo= useSelector((store)=>(store.user.userInfo));
   
-  if(!userInfo){return  (<div className="flex  mt-[140px]">loading.......</div>)}
+  if(!userInfo){return  (<div className="flex  mt-[140px]"><Spinner/></div>)}
 
   return (
     <div className="flex  mt-[140px]">

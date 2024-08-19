@@ -8,11 +8,11 @@ import { useSelector } from 'react-redux'
 
 const Home = () => {
   let getUserInfo = useGetUserInfo();
- 
+  let searchedUser = useSelector((store) =>(store.user.searchedUser));
 
   useEffect(()=>{
-    getUserInfo("burakorkmez");
-  })
+    getUserInfo(searchedUser);
+  },[searchedUser])
 
   return (
     <div id='home' className='flex relative h-[100vh] w-[100%] '>

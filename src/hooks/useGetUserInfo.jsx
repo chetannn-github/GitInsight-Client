@@ -1,7 +1,8 @@
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { addUser } from "../redux store/userSlice";
 const useGetUserInfo = () => {
     let dispatch = useDispatch()
+    
     let getUserInfo = async (username) =>{
         try {
             let response = await fetch(`http://localhost:5000/api/users/profile/${username}`);

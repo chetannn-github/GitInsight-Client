@@ -2,6 +2,7 @@ import {Eye, File, FileHeart, Heart,  MapPin, Twitter, User, UserCheck} from "lu
 import {Link} from "react-router-dom"
 import { convertDate } from "../../utils/dateConvertor";
 const Profile = ({userInfo}) => {
+  
   let {login,avatar_url,url,location,twitter_username, followers,following,public_repos,public_gists,created_at} = userInfo;
   created_at = convertDate(created_at)
   return (

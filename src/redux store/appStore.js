@@ -5,7 +5,7 @@ import exploreSlice from "./exploreSlice";
 const appStore = configureStore({
     reducer:{
         user:userReducer,
-        explore:exploreSlice
+        explore:exploreSlice,
     }
 });
 

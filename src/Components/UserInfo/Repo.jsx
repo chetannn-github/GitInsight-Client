@@ -1,6 +1,7 @@
 import { Copy, GitFork, Star } from "lucide-react"
 import {Link} from "react-router-dom"
 import { convertDate } from "../../utils/dateConvertor";
+import {toast} from "react-hot-toast"
 
 const Repo = ({repo}) => {
   let {name , description , forks_count ,stargazers_count ,clone_url , language,created_at,svn_url} = repo;
@@ -8,6 +9,8 @@ const Repo = ({repo}) => {
 
   let handleCloneUrl =async ()=>{
    await navigator.clipboard.writeText(clone_url);
+   toast.success('Copied to clipboard!',{icon: '👏',});
+   console.log("copy ho gya hh ")
   }
 
   return (
@@ -25,7 +28,7 @@ const Repo = ({repo}) => {
 
 
       <div id="lang-imgs" className="flex gap-2  ">
-        <img  className= "  h-[50px] w-[50px]" src={`./${language.toLowerCase()}.svg`} alt="" />
+        <img  className= "  h-[50px] w-[50px]" src={`./${language?.toLowerCase()}.svg` } alt={`fav.png`} />
         
       </div>
     </div>
