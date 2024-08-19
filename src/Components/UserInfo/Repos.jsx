@@ -1,10 +1,12 @@
-import React from 'react'
 import Repo from './Repo'
 
-const Repos = () => {
+const Repos = ({repos}) => {
+ 
   return (
     <div className='min-h-fit  '>
-      <Repo/>  <Repo/><Repo/><Repo/>  <Repo/><Repo/>
+      {repos?.map((repo)=>(
+        <Repo  key={repo.id} repo={repo}/>
+      ))}
     </div>
   )
 }

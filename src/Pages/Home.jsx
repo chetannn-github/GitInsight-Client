@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import Searchbar from '../Components/Searchbar/Searchbar'
 import SortLinks from '../Components/SortLink/SortLinks'
 import UserInfo from '../Components/UserInfo/UserInfo'
+import useGetUserInfo from '../hooks/useGetUserInfo'
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+  let getUserInfo = useGetUserInfo();
+ 
+
+  useEffect(()=>{
+    getUserInfo("burakorkmez");
+  })
+
   return (
     <div id='home' className='flex relative h-[100vh] w-[100%] '>
       <Navbar/>

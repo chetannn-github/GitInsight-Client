@@ -1,14 +1,23 @@
-import React from 'react'
+import {useDispatch} from "react-redux"
+import { changeLanguage, removeExplore } from "../../redux store/exploreSlice";
 
 const ExploreHeader = () => {
+  let dispatch = useDispatch();
+
+  const handleChangeLanguage  = (language) =>{
+    dispatch(removeExplore());
+    dispatch(changeLanguage(language))
+
+
+  }
   return (
     <div className='flex fixed h-[150px] flex-col items-center w-1/2 py-7 gap-3 bg-black'>
         <div>Popular Repositories</div>
         <div className='flex gap-7  bg-black '>
-            <img src="./javascript.svg" alt="" />
-            <img src="./c++.svg" alt="" />
-            <img src="./go.svg" alt="" />
-            <img src="./java.svg" alt="" />
+            <img src="./javascript.svg" onClick={()=>handleChangeLanguage("javascript")} alt="" />
+            <img src="./c.svg" alt=""  onClick={()=>handleChangeLanguage("c++")}/>
+            <img src="./go.svg" alt="" onClick={()=>handleChangeLanguage("go")}/>
+            <img src="./java.svg" alt="" onClick={()=>handleChangeLanguage("java")}/>
           </div>
         
         

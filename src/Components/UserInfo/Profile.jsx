@@ -1,38 +1,46 @@
-import {Eye, File, FileHeart, Heart, MapPin, Twitter, User, UserCheck} from "lucide-react"
-
-const Profile = () => {
+import {Eye, File, FileHeart, Heart,  MapPin, Twitter, User, UserCheck} from "lucide-react"
+import {Link} from "react-router-dom"
+import { convertDate } from "../../utils/dateConvertor";
+const Profile = ({userInfo}) => {
+  let {login,avatar_url,url,location,twitter_username, followers,following,public_repos,public_gists,created_at} = userInfo;
+  created_at = convertDate(created_at)
   return (
     <div className="flex  flex-col fixed gap-5 w-[400px] px-3 -py-2 ">
       <div  className="flex gap-3 ">
         <div id="img" className="h-[100px] w-[100px]">
-          <img src="./fav.png" className="relative h-full w-full" alt="" />
+          <img src={avatar_url} className="relative h-full w-full rounded-full" alt="" />
         </div>
         <div className="flex flex-col gap-1 justify-center"> 
           <div className="flex gap-2">
             <Heart fill="white"/>
             <button> Like Profile</button>
           </div>
-          <div className="flex gap-2"> 
-          <Eye />
-          <button>View on Github</button>
-          </div>
+          <Link to={url}>
+            <div className="flex gap-2"> 
+              
+                <Eye />
+              <button>View on Github</button>
+            </div>
+          </Link>
         </div>
       </div>
 
       <div className="flex flex-col gap-2">
         <div  className="flex gap-1">
-          <MapPin />Jaipur, India
+          <MapPin />{location}
         </div>
-        <div className="flex gap-1">
-        <Twitter /> @csrtwt
-        </div>
+        <Link to={`https://twitter.com/${twitter_username}`}>
+          <div className="flex gap-1">
+            <Twitter /> @{twitter_username}
+          </div>
+        </Link>
         <div className="flex flex-col  ">
           <p className="opacity-65  text-xs">member since</p>
-          <p>Dec 02,2023</p>
+          <p>{created_at}</p>
         </div>
         <div className="flex flex-col -gap-1 ">
           <p className="opacity-65  text-sm">username</p>
-          <p>chetannn-github</p>
+          <p>{login}</p>
          
         </div>
       </div>
@@ -40,20 +48,20 @@ const Profile = () => {
       <div className="flex flex-col gap-2">
         <div className="flex  gap-3 ">
           <div className="flex gap-1">
-          <UserCheck /> Followers 532
+          <UserCheck /> Followers: {followers}
           </div>
           <div className="flex gap-1">
-          <User /> Followings 321
+          <User /> Followings: {following}
           </div>
         </div>
   
         <div className="flex gap-3">
           <div className="flex gap-1">
-          <File/> Public Repos 2
+          <File/> Public Repos: {public_repos}
           </div>
           <div className="flex gap-1">
           <FileHeart />
-           Public gists 2
+           Public gists: {public_gists}
           </div>
         </div>
       </div>
