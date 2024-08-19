@@ -3,7 +3,7 @@ import Repo from './Repo'
 
 const Repos = () => {
   return (
-    <div className='min-h-fit   ml-[400px] w-[calc(100%-400px)] '>
+    <div className='min-h-fit  '>
       <Repo/>  <Repo/><Repo/><Repo/>  <Repo/><Repo/>
     </div>
   )

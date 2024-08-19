@@ -2,7 +2,7 @@ import {Eye, File, FileHeart, Heart, MapPin, Twitter, User, UserCheck} from "luc
 
 const Profile = () => {
   return (
-    <div className="flex flex-col fixed gap-5 w-[400px] p-3 ">
+    <div className="flex  flex-col fixed gap-5 w-[400px] px-3 -py-2 ">
       <div  className="flex gap-3 ">
         <div id="img" className="h-[100px] w-[100px]">
           <img src="./fav.png" className="relative h-full w-full" alt="" />
@@ -38,7 +38,7 @@ const Profile = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex justify-evenly gap-2 ">
+        <div className="flex  gap-3 ">
           <div className="flex gap-1">
           <UserCheck /> Followers 532
           </div>
@@ -47,7 +47,7 @@ const Profile = () => {
           </div>
         </div>
   
-        <div className="flex justify-evenly">
+        <div className="flex gap-3">
           <div className="flex gap-1">
           <File/> Public Repos 2
           </div>

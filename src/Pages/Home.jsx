@@ -10,10 +10,10 @@ const Home = () => {
       <Navbar/>
     
 
-      <div className='relative  flex flex-col ml-[60px] w-[calc(100%-60px)]'>
+      <div className='relative px-20 flex flex-col ml-[60px] w-[calc(100%-60px)]'>
         <div className='fixed bg-black h-[140px] z-99 p-3 w-full flex flex-col pb-3 gap-3 items-center'>
-        <Searchbar/>
-        <SortLinks/>
+          <Searchbar/>
+          <SortLinks/>
         </div>
         <UserInfo/>
       </div>
