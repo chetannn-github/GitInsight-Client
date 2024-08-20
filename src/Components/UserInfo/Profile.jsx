@@ -30,11 +30,11 @@ const Profile = ({userInfo}) => {
         <div  className="flex gap-1">
           <MapPin />{location}
         </div>
-        <Link to={`https://twitter.com/${twitter_username}`}>
+       {twitter_username &&<Link to={`https://twitter.com/${twitter_username}`}>
           <div className="flex gap-1">
             <Twitter /> @{twitter_username}
           </div>
-        </Link>
+        </Link>}
         <div className="flex flex-col  ">
           <p className="opacity-65  text-xs">member since</p>
           <p>{created_at}</p>

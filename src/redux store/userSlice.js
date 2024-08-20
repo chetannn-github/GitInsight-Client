@@ -16,12 +16,15 @@ const userSlice = createSlice({
         },
         changeSearchedUser : (state,action) =>{
             state.searchedUser = action.payload;
+        },
+        addSortRepo:(state,action) =>{
+            state.userInfo = action.payload;
         }
 
         
     }
 })
 
-export const {addUser,removeUser,changeSearchedUser} = userSlice.actions;
+export const {addUser,removeUser,changeSearchedUser,addSortRepo} = userSlice.actions;
 
 export default userSlice.reducer

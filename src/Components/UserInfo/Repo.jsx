@@ -9,7 +9,7 @@ const Repo = ({repo}) => {
 
   let handleCloneUrl =async ()=>{
    await navigator.clipboard.writeText(clone_url);
-   toast.success('Copied to clipboard!',{icon: '👏',});
+   toast.success('Copied to clipboard!',{icon: '✅',});
    console.log("copy ho gya hh ")
   }
 

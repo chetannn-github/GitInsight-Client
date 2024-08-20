@@ -1,12 +1,16 @@
 import {Compass, Github, Heart, House, LogOut} from 'lucide-react'
 import {Link} from "react-router-dom"
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { changeSearchedUser, removeUser } from '../../redux store/userSlice';
 
 const Navlink = () => {
   let dispatch = useDispatch();
+  let searchedUser = useSelector((store) =>(store.user.searchedUser));
+  
   let handleSearchLoggedInUser = ()=>{
+    if(searchedUser ==="chetannn-github"){return}
     dispatch(removeUser());
+    
     dispatch(changeSearchedUser("chetannn-github"));
 
   }
