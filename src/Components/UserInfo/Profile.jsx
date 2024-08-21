@@ -1,10 +1,15 @@
 import {Eye, File, FileHeart, Heart,  MapPin, Twitter, User, UserCheck} from "lucide-react"
 import {Link} from "react-router-dom"
 import { convertDate } from "../../utils/dateConvertor";
+import useLikeProfile from "../../hooks/useLikeProfile";
 const Profile = ({userInfo}) => {
   
   let {login,avatar_url,url,location,twitter_username, followers,following,public_repos,public_gists,created_at} = userInfo;
-  created_at = convertDate(created_at)
+  created_at = convertDate(created_at);
+
+  let likeProfile = useLikeProfile();
+
+
   return (
     <div className="flex  flex-col fixed gap-5 w-[400px] px-3 -py-2 ">
       <div  className="flex gap-3 ">
@@ -14,7 +19,7 @@ const Profile = ({userInfo}) => {
         <div className="flex flex-col gap-1 justify-center"> 
           <div className="flex gap-2">
             <Heart fill="white"/>
-            <button> Like Profile</button>
+            <button onClick={()=>(likeProfile(login))}> Like Profile</button>
           </div>
           <Link to={url}>
             <div className="flex gap-2"> 

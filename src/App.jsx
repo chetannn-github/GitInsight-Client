@@ -5,9 +5,15 @@ import Explore from "./Pages/Explore"
 import Notifications from "./Pages/Notifications"
 import { Toaster } from "react-hot-toast"
 
+import { useEffect } from "react"
+import useCheckAuth from "./hooks/useCheckAuth"
+
 
 
 function App() {
+  let checkAuth = useCheckAuth();
+
+  useEffect(()=>{checkAuth()},[])
   
   return (
   <div className="relative h-full">

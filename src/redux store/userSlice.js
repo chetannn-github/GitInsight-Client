@@ -5,7 +5,8 @@ const userSlice = createSlice({
     name:"user",
     initialState:{
         userInfo:null,
-        searchedUser :"chetannn-github"
+        searchedUser :JSON.parse(localStorage.getItem("authUser"))?.username || "git",
+        loggedInUser:JSON.parse(localStorage.getItem("authUser"))
     },
     reducers:{
         addUser: (state, action) =>{
@@ -13,6 +14,9 @@ const userSlice = createSlice({
         },
         removeUser:(state,action) =>{
             state.userInfo = null;
+        },
+        addLoggedInUser:(state,action )=>{
+            state.loggedInUser = action.payload;
         },
         changeSearchedUser : (state,action) =>{
             state.searchedUser = action.payload;
@@ -25,6 +29,6 @@ const userSlice = createSlice({
     }
 })
 
-export const {addUser,removeUser,changeSearchedUser,addSortRepo} = userSlice.actions;
+export const {addUser,removeUser,changeSearchedUser,addSortRepo, addLoggedInUser} = userSlice.actions;
 
 export default userSlice.reducer

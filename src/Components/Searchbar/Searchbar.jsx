@@ -9,7 +9,7 @@ const Searchbar = () => {
 
   let handleSearchUser = () => {
     dispatch(removeUser());
-    dispatch(changeSearchedUser(inputRef.current.value));
+    dispatch(changeSearchedUser(inputRef.current.value.trim()));
     
   }
   return (
