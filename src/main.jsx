@@ -2,8 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import appStore from './reduxstore/appstore'
+
 import {Provider}  from "react-redux"
+import appStore from './reduxstore/appStore.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
