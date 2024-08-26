@@ -11,7 +11,7 @@ const ExploreHeader = () => {
 
   }
   return (
-    <div className='flex fixed h-[150px] flex-col items-center w-1/2 py-7 gap-3 bg-black'>
+    <div className='flex fixed h-[150px] flex-col items-center w-[85%] md:w-1/2 py-7 gap-3 z-50 bg-black'>
         <div>Popular Repositories</div>
         <div className='flex gap-7  bg-black cursor-pointer'>
             <img src="./javascript.svg" onClick={()=>handleChangeLanguage("javascript")} alt="" />
