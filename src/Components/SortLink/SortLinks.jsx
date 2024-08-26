@@ -15,9 +15,9 @@ const SortLinks = () => {
   }
   return (
     <div className='flex gap-3  '>
-      <button type="button" className='border-[1px] rounded-xl border-opacity-20 px-4 py-2'onClick={()=>(handleMost("created_at"))} >Most Recent</button>
-      <button type="button" className='border-[1px] rounded-xl border-opacity-5 px-4 py-1'onClick={()=>(handleMost("forks_count"))}>Most Forks</button>
-      <button type="button" className='border-[1px] rounded-xl border-opacity-90 px-4 py-2'onClick={()=>(handleMost("stargazers_count"))}>Most Stars</button>
+      <button type="button" className='border-[1px] rounded-xl border-opacity-20 px-4 py-2 'onClick={()=>(handleMost("created_at"))} >Most Recent</button>
+      <button type="button" className='border-[1px] rounded-xl border-opacity-20 px-4 py-2'onClick={()=>(handleMost("forks_count"))}>Most Forks</button>
+      <button type="button" className='border-[1px] rounded-xl border-opacity-20 px-4 py-2'onClick={()=>(handleMost("stargazers_count"))}>Most Stars</button>
     </div>
   )
 }

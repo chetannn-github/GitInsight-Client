@@ -11,7 +11,7 @@ const Profile = ({userInfo}) => {
 
 
   return (
-    <div className="flex  flex-col fixed gap-5 w-[400px] px-3 -py-2 ">
+    <div className=" relative md:fixed flex  flex-col  gap-5 h-[65vh] w-full  md:w-[400px] px-3 -py-2 ">
       <div  className="flex gap-3 ">
         <div id="img" className="h-[100px] w-[100px]">
           <img src={avatar_url} className="relative h-full w-full rounded-full" alt="" />

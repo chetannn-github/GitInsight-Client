@@ -15,12 +15,16 @@ const Repo = ({repo}) => {
 
   return (
     
-    <div className="flex flex-col gap-2 p-3 ">
-      <div className="flex gap-5 items-center">
-        <Link to={svn_url}> <h3 className="text-xl">{name}</h3> </Link>
-         <div className="flex items-center gap-2 px-5 py-[4px] rounded-xl bg-red-600 "> <GitFork  size={17}/>{forks_count}</div>
-         <div className="flex items-center gap-2 px-5 py-[4px] rounded-xl bg-yellow-600"><Star size={17}/>{stargazers_count}</div>
-         <div className="flex items-center gap-2 px-5 py-[4px] rounded-xl bg-green-700 cursor-pointer" onClick={handleCloneUrl}><Copy size={17}/>Clone</div>
+    <div className="relative w-full flex flex-col gap-2 p-3 ">
+      <div className="relative flex gap-2  flex-col  xl:flex-row xl:items-center">
+        <Link to={svn_url}> <h3 className="text-sm md:text-xl">{name}</h3> </Link>
+
+        <div className="flex gap-2">
+         <div className="flex items-center gap-2 px-2 text-sm md:px-5 py-[4px] rounded-xl bg-red-600 "> <GitFork  size={17}/>{forks_count}</div>
+         <div className="flex items-center gap-2 px-2 text-sm md:px-5 py-[4px] rounded-xl bg-yellow-600"><Star size={17}/>{stargazers_count}</div>
+         <div className="flex items-center gap-2 px-2 text-sm md:px-5 py-[4px] rounded-xl bg-green-700 cursor-pointer" onClick={handleCloneUrl}><Copy size={17}/>Clone</div>
+        </div>
+
       </div>
       
       <p className="text-xs">Released on {created_at}</p>

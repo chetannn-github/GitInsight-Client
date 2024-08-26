@@ -12,15 +12,14 @@ const UserInfo = () => {
   if(!userInfo){return  (<div className="flex  mt-[140px]"><Spinner/></div>)}
 
   if(userInfo.error){
-    toast.error("please enter correct username",{
-      position:"bottom-center"
-    });
+    toast.error("please enter correct username",{position:"bottom-center"});
     return
   }
+
   return (
-    <div className="flex  mt-[140px]">
+    <div className="flex flex-col relative  w-full h-fit z-10  mt-[140px] ">
         <Profile userInfo={userInfo.userProfile}/>
-        <div className="ml-[400px] flex  pl-10  w-[calc(100%-400px)] "> 
+        <div className="md:ml-[400px] flex  md:pl-10  md:w-[calc(100%-400px)]  "> 
           <Repos repos={userInfo.repos} />
         </div>
        
