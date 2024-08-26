@@ -1,5 +1,5 @@
 import {useDispatch} from "react-redux"
-import { addExplore } from "../redux store/exploreSlice";
+import { addExplore } from "../reduxstore/exploreSlice";
 import { BASE_URL } from "../utils/constants";
 
 
