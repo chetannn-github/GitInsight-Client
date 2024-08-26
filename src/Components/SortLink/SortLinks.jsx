@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux"
-import { addSortRepo } from "../../redux store/userSlice";
+import { addSortRepo } from "../../reduxstore/userSlice";
 const SortLinks = () => {
   let userInfo = useSelector((store)=>(store.user?.userInfo))
   let dispatch = useDispatch();

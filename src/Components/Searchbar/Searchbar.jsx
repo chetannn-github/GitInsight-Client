@@ -1,7 +1,7 @@
 import {Search} from "lucide-react"
 import { useRef } from "react"
 import { useDispatch } from "react-redux";
-import { changeSearchedUser, removeUser } from "../../redux store/userSlice";
+import { changeSearchedUser, removeUser } from "../../reduxstore/userSlice";
 
 const Searchbar = () => {
   let inputRef= useRef(null);

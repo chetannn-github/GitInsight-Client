@@ -1,9 +1,10 @@
 import {toast} from "react-hot-toast"
+import { BASE_URL } from "../utils/constants";
 
 const useLikeProfile = () => {
     let likeProfile =async (username) =>{
         try {
-            let response = await fetch(`http://localhost:5000/api/users/likes/${username}`,{
+            let response = await fetch(`${BASE_URL}/api/users/likes/${username}`,{
                 method:"post",
                 credentials:'include',
             }, 

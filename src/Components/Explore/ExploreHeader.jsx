@@ -1,5 +1,5 @@
 import {useDispatch} from "react-redux"
-import { changeLanguage, removeExplore } from "../../redux store/exploreSlice";
+import { changeLanguage, removeExplore } from "../../reduxstore/exploreSlice";
 
 const ExploreHeader = () => {
   let dispatch = useDispatch();

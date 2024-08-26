@@ -1,11 +1,12 @@
 import {toast} from "react-hot-toast"
 import { useDispatch } from "react-redux";
-import { addLoggedInUser, changeSearchedUser } from "../redux store/userSlice";
+import { addLoggedInUser, changeSearchedUser } from "../reduxstore/userSlice";
+import { BASE_URL } from "../utils/constants";
 const useLogout = () => {   
     let dispatch = useDispatch();
     let handleLogout = async() =>{
         try {
-            let response = await fetch("http://localhost:5000/api/auth/logout",{
+            let response = await fetch(`${BASE_URL}/api/auth/logout`,{
                 credential:'include'
             });
             let result = await response.json();

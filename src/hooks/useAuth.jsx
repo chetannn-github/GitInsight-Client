@@ -1,8 +1,8 @@
-
+import { BASE_URL } from "../utils/constants";
 
 const useAuth = () => {
   let handleAuth = async() =>{
-    window.open("http://localhost:5000/api/auth/github/","_self")
+    window.open(`${BASE_URL}/api/auth/github/`,"_self")
   }
   return handleAuth
 }

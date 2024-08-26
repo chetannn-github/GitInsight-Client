@@ -1,7 +1,7 @@
 import {Compass, Github, Heart, House, LogIn, LogOut} from 'lucide-react'
 import {Link} from "react-router-dom"
 import {useDispatch, useSelector} from "react-redux"
-import { changeSearchedUser, removeUser } from '../../redux store/userSlice';
+import { changeSearchedUser, removeUser } from '../../reduxstore/userSlice';
 import useLogout from '../../hooks/useLogout';
 
 const Navlink = () => { 

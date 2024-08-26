@@ -1,12 +1,13 @@
 import { useDispatch } from "react-redux";
-import { addLoggedInUser, changeSearchedUser } from "../redux store/userSlice";
+import { addLoggedInUser, changeSearchedUser } from "../reduxstore/userSlice";
+import { BASE_URL } from "../utils/constants";
 
 
 const useCheckAuth = () => {
     let dispatch = useDispatch();
 
   let checkAuth = async() =>{
-    let response = await fetch("http://localhost:5000/api/auth/check", { credentials: "include" });
+    let response = await fetch(`${BASE_URL}/api/auth/check`, { credentials: "include" });
     let {user} = await response.json();
     // console.log(user);
 

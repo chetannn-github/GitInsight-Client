@@ -1,5 +1,6 @@
 import {useDispatch} from "react-redux"
 import { addExplore } from "../redux store/exploreSlice";
+import { BASE_URL } from "../utils/constants";
 
 
 const useExplore = () => {
@@ -9,7 +10,7 @@ const useExplore = () => {
 
   const getPopularRepos = async(language) =>{
         try{
-          let repoResult = await fetch(`http://localhost:5000/api/explore/${language}`);
+          let repoResult = await fetch(`${BASE_URL}/api/explore/${language}`);
           let repos = await repoResult.json();
           dispatch(addExplore(repos));
           console.log(repos);
